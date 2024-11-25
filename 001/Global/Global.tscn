@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://qsq8vgppv4kv"]
+
+[ext_resource type="AudioStream" uid="uid://b225dka8p1c76" path="res://Recursos/Sonidos/Menu Selection Click.wav" id="1_g113v"]
+
+[node name="Global" type="Node"]
+
+[node name="ambientePajaros" type="AudioStreamPlayer" parent="."]
+autoplay = true
+
+[node name="Boton" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_g113v")

@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://bri10q11vbr1j"]
+
+[ext_resource type="PackedScene" uid="uid://bnt3kd8x3el6e" path="res://Juego/Niveles/Plataformas/Plataforma001.tscn" id="1_xcsi0"]
+[ext_resource type="PackedScene" uid="uid://50j6two4gu06" path="res://Juego/Player/Player.tscn" id="2_25014"]
+
+[node name="001" type="Node"]
+
+[node name="Plataforma001" parent="." instance=ExtResource("1_xcsi0")]
+position = Vector2(-1, 243)
+
+[node name="Player" parent="." instance=ExtResource("2_25014")]

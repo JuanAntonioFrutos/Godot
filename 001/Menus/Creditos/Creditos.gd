@@ -1,6 +1,6 @@
 extends Control
 
-var ScnMPrincipal = preload("res://Menus/Principal/Principal.tscn")
+var ScnMPrincipal = load("res://Menus/Principal/Principal.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -13,5 +13,6 @@ func _process(delta):
 
 
 func _on_button_principal_pressed():
+	$"/root/Global/Boton".play()
 	get_tree().change_scene_to_packed(ScnMPrincipal)
 	pass # Replace with function body.

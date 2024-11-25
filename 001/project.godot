@@ -11,5 +11,10 @@ config_version=5
 [application]
 
 config/name="Menu"
-config/features=PackedStringArray("4.1", "Forward Plus")
+run/main_scene="res://Menus/Principal/Principal.tscn"
+config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+Global="*res://Global/Global.tscn"
