@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://2qa3kj2l3dwu"]
+
+[ext_resource type="Script" path="res://Juego Naves/Player/Disparo000/disparo_000.gd" id="1_i2xdd"]
+[ext_resource type="Texture2D" uid="uid://byfflqvhufin6" path="res://Recursos/imagenes/pngegg(2).png" id="2_m3m4n"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_n2kbn"]
+radius = 8.0
+height = 48.0
+
+[node name="Disparo000" type="Node2D"]
+position = Vector2(505, 550)
+scale = Vector2(0.5, 0.5)
+script = ExtResource("1_i2xdd")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_m3m4n")
+region_enabled = true
+region_rect = Rect2(366.455, 2464.27, 35.4546, 64.5457)
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CapsuleShape2D_n2kbn")

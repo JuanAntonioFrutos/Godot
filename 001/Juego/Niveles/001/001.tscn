@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://bri10q11vbr1j"]
+[gd_scene load_steps=6 format=3 uid="uid://bri10q11vbr1j"]
 
 [ext_resource type="PackedScene" uid="uid://bnt3kd8x3el6e" path="res://Juego/Niveles/Plataformas/Plataforma001.tscn" id="1_xcsi0"]
 [ext_resource type="PackedScene" uid="uid://50j6two4gu06" path="res://Juego/Player/Player.tscn" id="2_25014"]
 [ext_resource type="PackedScene" uid="uid://csu2wtkqgqaj0" path="res://Juego/Potenciadores/Explosion/Explosion.tscn" id="3_mjkgq"]
 [ext_resource type="PackedScene" uid="uid://bs7tv3e5t3hhx" path="res://Juego/Potenciadores/Bandera/Bandera.tscn" id="4_wno52"]
+[ext_resource type="PackedScene" uid="uid://deiasbmfnjd4" path="res://Menus/Volver al menu principal/IrAMenuPrincipal.tscn" id="5_mxa07"]
 
 [node name="001" type="Node"]
 
@@ -20,3 +21,5 @@ position = Vector2(481, 156)
 
 [node name="Bandera" parent="." instance=ExtResource("4_wno52")]
 position = Vector2(331, 175)
+
+[node name="IrAMenuPrincipal" parent="." instance=ExtResource("5_mxa07")]

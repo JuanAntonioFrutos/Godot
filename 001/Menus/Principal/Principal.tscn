@@ -25,12 +25,13 @@ layout_mode = 2
 text = "Juego Plataformas
 "
 
-[node name="ButtonJuegoAzimutal" type="Button" parent="CenterContainer"]
+[node name="ButtonJuegoNaves" type="Button" parent="CenterContainer"]
 layout_mode = 2
-text = "Juego Azimutal
+text = "JuegoNaves
 "
 
 [connection signal="mouse_entered" from="CenterContainer/ButtonCreditos" to="." method="_on_button_creditos_mouse_entered"]
 [connection signal="mouse_exited" from="CenterContainer/ButtonCreditos" to="." method="_on_button_creditos_mouse_exited"]
 [connection signal="pressed" from="CenterContainer/ButtonCreditos" to="." method="_on_button_creditos_pressed"]
 [connection signal="pressed" from="CenterContainer/ButtonJuegoPlataformas" to="." method="_on_button_juego_pressed"]
+[connection signal="pressed" from="CenterContainer/ButtonJuegoNaves" to="." method="_on_button_juego_naves_pressed"]

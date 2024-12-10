@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://deiasbmfnjd4"]
+
+[ext_resource type="Script" path="res://Menus/Volver al menu principal/ir_a_menu_principal.gd" id="1_d32xx"]
+
+[node name="IrAMenuPrincipal" type="Button"]
+offset_left = 1093.0
+offset_top = 6.0
+offset_right = 1146.0
+offset_bottom = 37.0
+text = "Menu"
+script = ExtResource("1_d32xx")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

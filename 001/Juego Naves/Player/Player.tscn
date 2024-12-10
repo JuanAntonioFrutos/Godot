@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://myvgpmgjcth7"]
+
+[ext_resource type="Script" path="res://Juego Naves/Player/player.gd" id="1_eq8ij"]
+[ext_resource type="Texture2D" uid="uid://byfflqvhufin6" path="res://Recursos/imagenes/pngegg(2).png" id="2_f284t"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_h61os"]
+radius = 23.0
+height = 62.0
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_eq8ij")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_h61os")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_f284t")
+region_enabled = true
+region_rect = Rect2(54, 310, 148, 150)
+
+[node name="SpawnDisparo" type="Marker2D" parent="."]
+position = Vector2(0, -32)

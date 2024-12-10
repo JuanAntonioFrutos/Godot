@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://d1s14gcgh53oi"]
+
+[ext_resource type="PackedScene" uid="uid://myvgpmgjcth7" path="res://Juego Naves/Player/Player.tscn" id="1_be7ik"]
+[ext_resource type="PackedScene" uid="uid://deiasbmfnjd4" path="res://Menus/Volver al menu principal/IrAMenuPrincipal.tscn" id="2_3kikg"]
+
+[node name="000" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_be7ik")]
+
+[node name="IrAMenuPrincipal" parent="." instance=ExtResource("2_3kikg")]

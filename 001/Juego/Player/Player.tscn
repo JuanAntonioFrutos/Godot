@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://baubvkddrgxse" path="res://Recursos/imagenes/hombre-lpc2.png" id="2_fk2f8"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xknv2"]
+height = 50.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3emc1"]
 atlas = ExtResource("2_fk2f8")
@@ -105,6 +106,7 @@ script = ExtResource("1_g8uhx")
 shape = SubResource("CapsuleShape2D_xknv2")
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
+position = Vector2(0, -6)
 sprite_frames = SubResource("SpriteFrames_7fvt4")
 animation = &"idle"
 frame = 1
