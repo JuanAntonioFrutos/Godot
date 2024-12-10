@@ -1,11 +1,22 @@
-[gd_scene load_steps=3 format=3 uid="uid://bri10q11vbr1j"]
+[gd_scene load_steps=5 format=3 uid="uid://bri10q11vbr1j"]
 
 [ext_resource type="PackedScene" uid="uid://bnt3kd8x3el6e" path="res://Juego/Niveles/Plataformas/Plataforma001.tscn" id="1_xcsi0"]
 [ext_resource type="PackedScene" uid="uid://50j6two4gu06" path="res://Juego/Player/Player.tscn" id="2_25014"]
+[ext_resource type="PackedScene" uid="uid://csu2wtkqgqaj0" path="res://Juego/Potenciadores/Explosion/Explosion.tscn" id="3_mjkgq"]
+[ext_resource type="PackedScene" uid="uid://bs7tv3e5t3hhx" path="res://Juego/Potenciadores/Bandera/Bandera.tscn" id="4_wno52"]
 
 [node name="001" type="Node"]
 
 [node name="Plataforma001" parent="." instance=ExtResource("1_xcsi0")]
-position = Vector2(-1, 243)
+position = Vector2(376, 236)
 
 [node name="Player" parent="." instance=ExtResource("2_25014")]
+
+[node name="Explosion" parent="." instance=ExtResource("3_mjkgq")]
+position = Vector2(189, 159)
+
+[node name="Explosion2" parent="." instance=ExtResource("3_mjkgq")]
+position = Vector2(481, 156)
+
+[node name="Bandera" parent="." instance=ExtResource("4_wno52")]
+position = Vector2(331, 175)

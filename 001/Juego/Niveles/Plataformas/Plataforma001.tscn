@@ -1,9 +1,18 @@
-[gd_scene load_steps=2 format=3 uid="uid://bnt3kd8x3el6e"]
+[gd_scene load_steps=3 format=3 uid="uid://bnt3kd8x3el6e"]
+
+[ext_resource type="Texture2D" uid="uid://naljrgvfcw1b" path="res://Recursos/imagenes/arcade_platformerV2_alpha.png" id="1_iea4i"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_01k0m"]
 size = Vector2(751, 89)
 
 [node name="Plataforma001" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-3.49998, 6)
+scale = Vector2(16.6889, 2)
+texture = ExtResource("1_iea4i")
+region_enabled = true
+region_rect = Rect2(210, 65, 45, 45)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 

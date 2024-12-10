@@ -1,0 +1,147 @@
+[gd_scene load_steps=20 format=3 uid="uid://bs7tv3e5t3hhx"]
+
+[ext_resource type="Texture2D" uid="uid://db321gb22cx3k" path="res://Recursos/imagenes/schecky_flag_raise_strip15.png" id="1_yskno"]
+[ext_resource type="Script" path="res://Juego/Potenciadores/Bandera/bandera.gd" id="2_l1mnc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bh02r"]
+atlas = ExtResource("1_yskno")
+region = Rect2(0, 0, 32, 45)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_60u4f"]
+atlas = ExtResource("1_yskno")
+region = Rect2(0, 0, 32, 45)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lc6u0"]
+atlas = ExtResource("1_yskno")
+region = Rect2(32, 0, 32, 45)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vti2s"]
+atlas = ExtResource("1_yskno")
+region = Rect2(64, 0, 32, 45)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vv6vq"]
+atlas = ExtResource("1_yskno")
+region = Rect2(96, 0, 32, 45)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cowhc"]
+atlas = ExtResource("1_yskno")
+region = Rect2(128, 0, 32, 45)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g6hrq"]
+atlas = ExtResource("1_yskno")
+region = Rect2(160, 0, 32, 45)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v82xi"]
+atlas = ExtResource("1_yskno")
+region = Rect2(192, 0, 32, 45)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_62u7r"]
+atlas = ExtResource("1_yskno")
+region = Rect2(224, 0, 32, 45)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_16jrn"]
+atlas = ExtResource("1_yskno")
+region = Rect2(256, 0, 32, 45)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vm7ss"]
+atlas = ExtResource("1_yskno")
+region = Rect2(288, 0, 32, 45)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dcf2a"]
+atlas = ExtResource("1_yskno")
+region = Rect2(320, 0, 32, 45)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qrk88"]
+atlas = ExtResource("1_yskno")
+region = Rect2(352, 0, 32, 45)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b2m4h"]
+atlas = ExtResource("1_yskno")
+region = Rect2(384, 0, 32, 45)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_150pb"]
+atlas = ExtResource("1_yskno")
+region = Rect2(416, 0, 32, 45)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1pwfw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bh02r")
+}],
+"loop": true,
+"name": &"bandera",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_60u4f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lc6u0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vti2s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vv6vq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cowhc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g6hrq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v82xi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_62u7r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_16jrn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vm7ss")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dcf2a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qrk88")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b2m4h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_150pb")
+}],
+"loop": false,
+"name": &"tocar bandera",
+"speed": 20.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lseru"]
+size = Vector2(1, 34)
+
+[node name="Bandera" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_1pwfw")
+animation = &"tocar bandera"
+frame = 13
+frame_progress = 1.0
+script = ExtResource("2_l1mnc")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-9, 5)
+shape = SubResource("RectangleShape2D_lseru")
+
+[node name="Area2D2" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
+position = Vector2(8, 5)
+shape = SubResource("RectangleShape2D_lseru")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="Area2D2" to="." method="_on_area_2d_2_body_entered"]
