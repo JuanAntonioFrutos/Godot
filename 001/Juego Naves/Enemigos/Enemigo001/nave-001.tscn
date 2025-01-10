@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://bomotpowgdd15"]
+
+[ext_resource type="Script" path="res://Juego Naves/Enemigos/Enemigo001/nave-001.gd" id="1_brvkm"]
+[ext_resource type="PackedScene" uid="uid://myvgpmgjcth7" path="res://Juego Naves/Player/Player.tscn" id="2_ndd0u"]
+
+[node name="nave-001" type="Node2D"]
+script = ExtResource("1_brvkm")
+
+[node name="Player" parent="." instance=ExtResource("2_ndd0u")]
+rotation = 3.12214
+script = null
+
+[node name="Sprite2D" parent="Player" index="1"]
+region_rect = Rect2(54, 51.96, 148, 150)
+
+[editable path="Player"]
